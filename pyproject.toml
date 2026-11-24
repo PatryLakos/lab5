@@ -1,0 +1,32 @@
+[project]
+name = "lab5"
+version = "0.1.0"
+description = "Laboratorium 5 – grafowa baza danych Neo4j (Bazy danych dla SI)"
+readme = "README.md"
+authors = [
+    { name = "Patryk Kaniosz", email = "patrykkaniosza4@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=7.4.0",
+    "matplotlib>=3.11.2",
+    "nbconvert>=7.17.2",
+    "neo4j>=6.4.1",
+    "palmerpenguins>=0.1.6",
+    "pandas>=3.1.1",
+    "python-docx>=1.2.0",
+    "seaborn>=0.13.2",
+    "tabulate>=0.10.0",
+]
+
+[project.scripts]
+lab5 = "lab5:main"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "playwright>=1.65.2",
+]

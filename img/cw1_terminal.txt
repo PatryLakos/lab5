@@ -1,0 +1,18 @@
+> docker compose up -d
+ Container graphdb  Running
+
+> docker ps
+CONTAINER ID   IMAGE                  STATUS          PORTS                                                      NAMES
+c04a3fac0f92   neo4j:2026-community   Up 6 minutes    7473/tcp, 0.0.0.0:7475->7474/tcp, 0.0.0.0:7688->7687/tcp   graphdb_projekt
+74b3679dc869   neo4j:2026-community   Up 10 minutes   0.0.0.0:7474->7474/tcp, 7473/tcp, 0.0.0.0:7687->7687/tcp   graphdb
+
+> docker exec -it graphdb cypher-shell
+neo4j@neo4j> RETURN 1;
++---+
+| 1 |
++---+
+| 1 |
++---+
+
+1 row
+neo4j@neo4j> :exit
